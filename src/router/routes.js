@@ -1,12 +1,25 @@
-import AboutMe from "../pages/AboutMe";
+import { lazy } from "react";
+
 
 export const routes = [
     {
-        page:'AboutMe',
-        component: <AboutMe />
+        path:'/AboutMe',
+        component: lazy(()=>import('../pages/AboutMe') )
     },
     {
-        page: '/',
-        component: <AboutMe />
+        path:'/MyWork',
+        component: lazy(()=>import('../pages/MyWork') )
+    },
+    {
+        path:'/Comments',
+        component: lazy(()=>import('../pages/Comments') )
+    },
+    {
+        path:'/ContactMe',
+        component: lazy(()=>import('../pages/ContactMe') )
+    },
+    {
+        path: '/',
+        component: lazy(()=>import('../pages/AboutMe') )
     }
 ]
