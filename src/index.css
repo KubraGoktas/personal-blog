@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Zen+Old+Mincho:wght@700&display=swap');
 
 body {
+  
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -23,4 +24,35 @@ code {
 
 .navlink:hover{
   color: gray;
+}
+
+.sticky {
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  bottom: 20;
+  z-index: 100;
+}
+.image{
+  border-radius: 900px;
+  width: 20%;
+  height: 90%;
+  z-index: 5;
+}
+.image-container{
+  padding:20px;
+  width: 100%;
+  align-self: center;
+  text-align: center;
+  position: relative;
+  
+}
+
+.about-container{
+  position: absolute;
+  background-color: #393E46;
+  width: 100%;
+  height: 100%;
+  margin-top: -100px;
+  z-index: -1;
 }

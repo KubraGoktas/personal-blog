@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Collapse, DropdownItem, DropdownMenu, DropdownToggle, Nav, Navbar, NavbarBrand, NavbarText, NavbarToggler, NavItem, NavLink, UncontrolledDropdown } from 'reactstrap'
+import { Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap'
 import logo from '../assets/images/logo.png'
 
 const Header = () => {
@@ -24,17 +24,19 @@ const Header = () => {
         }
     ]
     return (
-        <div>
+        <>
+
             <Navbar
                 color="dark"
                 dark
                 expand="md"
                 light
+                className="sticky"
             >
                 <NavbarBrand href="/">
-                    <img src={logo} width={50} height={50} />
+                    <img src={logo} width={50} height={50} alt='logo' />
                 </NavbarBrand>
-                <NavbarToggler onClick={()=>setopen(!open)} />
+                <NavbarToggler onClick={() => setopen(!open)} />
                 <Collapse isOpen={open} navbar>
                     <Nav
                         className="me-auto"
@@ -44,7 +46,7 @@ const Header = () => {
                         {
                             navLinks.map((item, key) => {
                                 return (
-                                    <NavItem>
+                                    <NavItem key={key}>
                                         <NavLink>
                                             <Link
                                                 to={{
@@ -68,7 +70,8 @@ const Header = () => {
                     </NavbarText> */}
                 </Collapse>
             </Navbar>
-        </div >
+
+        </>
     )
 }
 
