@@ -1,7 +1,11 @@
 import React, { useState } from 'react'
 import { Row } from 'reactstrap'
-import me from '../assets/images/me.jpg'
+import { Swiper, SwiperSlide } from 'swiper/react';
 
+import me from '../assets/images/me.jpg'
+import SwiperItem from '../components/SwiperItem';
+import 'swiper/swiper-bundle.min.css'
+import 'swiper/swiper.min.css'
 const AboutMe = () => {
     const [height, setheight] = useState(window.innerHeight)
     return (
@@ -12,7 +16,26 @@ const AboutMe = () => {
                 </div>
             </Row>
 
-            <div className='about-container'>
+            <div className='about-container' >
+                <div style={{ marginTop:100,height:'100%'}}>
+
+                    <Swiper
+                        spaceBetween={50}
+                        slidesPerView={1}
+                        onSlideChange={() => console.log('slide change')}
+                        onSwiper={(swiper) => console.log(swiper)}
+
+                    >
+                        <SwiperSlide>
+                            <SwiperItem />
+
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <SwiperItem />
+
+                        </SwiperSlide>
+                    </Swiper>
+                </div>
 
             </div>
 
