@@ -22,6 +22,7 @@ const AboutMe = () => {
                     <Swiper
                         spaceBetween={50}
                         slidesPerView={1}
+                        autoplay={true}
                         onSlideChange={() => console.log('slide change')}
                         onSwiper={(swiper) => console.log(swiper)}
 
