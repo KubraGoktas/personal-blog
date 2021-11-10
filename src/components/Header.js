@@ -34,14 +34,10 @@ const Header = () => {
                 light
                 className="sticky"
             >
-                {/* <NavbarBrand href="/">
-                    <img src={logo} width={50} height={50} alt='logo' />
-                </NavbarBrand> */}
                 <NavbarToggler onClick={() => setopen(!open)} />
                 <Collapse isOpen={open} navbar>
 
                     <Nav
-                        // className="me-auto"
                         navbar
                         className='navitem'
                     >

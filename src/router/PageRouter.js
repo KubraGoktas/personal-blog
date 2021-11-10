@@ -6,7 +6,6 @@ import AboutMe from '../pages/AboutMe'
 import ContactMe from '../pages/ContactMe'
 import MyWork from '../pages/MyWork'
 import Footer from '../components/Footer'
-import { routes } from './routes'
 import Comments from '../pages/Comments'
 
 const PageRouter = () => {
