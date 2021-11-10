@@ -78,3 +78,20 @@ code {
   background-color: rgba(255,255,255,.55) !important;
   border: none !important;
 }
+
+.test-container{
+  /* border: 1px solid gray; */
+  width: 40vw;
+  height: '10%';
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 20px;
+  justify-content: center !important;
+  margin: auto;
+  left: 0;  right: 0;
+}
+
+.icon{
+  /* justify-content: flex-end; */
+  right: 0;
+  
+}
