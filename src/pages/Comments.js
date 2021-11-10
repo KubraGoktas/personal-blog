@@ -6,13 +6,26 @@ import ts1 from '../assets/images/testimonial-01.png'
 import ts2 from '../assets/images/testimonial-02.png'
 import ts3 from '../assets/images/testimonial-03.png'
 import TsCard from '../components/TsCard';
-import { Button, Card, CardBody, Col, Collapse, Container, Row } from 'reactstrap';
+import { Button, Card, CardBody, Col, Collapse, Container, Input, Row } from 'reactstrap';
 
 import { BiCommentAdd } from "react-icons/bi";
-
+import { useForm } from 'react-hook-form'
 const Comments = () => {
 
     const [open, setopen] = useState(false)
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    const onSubmit = data => {
+        console.log(data)
+        const object = {
+            id: comments.length,
+            image: ts2,
+            name: data.name + data.surname,
+            comment: data.comment,
+            date: Date.now()
+        }
+        console.log('data', object)
+        setcomments((prev) => [...prev, object])
+    }
 
     const [comments, setcomments] = useState([
         {
@@ -54,19 +67,63 @@ const Comments = () => {
                     left: 0, right: 0,
                 }}
             >
-                <Row>
-                    {/* <Row
-                        onClick={()=>setopen(!open)}
+                <Row style={{ marginBottom: 20 }}>
+                    <Row
+                        onClick={() => setopen(!open)}
                         style={{
                             marginBottom: '1rem'
                         }}
-                    > */}
-                      <BiCommentAdd/>  Add Comment
-                    
+                    >
+                        <Col lg='1' className='addcommenticon'><BiCommentAdd /></Col>
+                        <Col lg='11' className='addcomment'>Add Comment</Col>
+                    </Row>
                     <Collapse isOpen={open}>
                         <Card>
                             <CardBody>
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                <form onSubmit={handleSubmit(onSubmit)}>
+
+                                    <Row >
+                                        <Col sm='12' md='6' className='mb-4'>
+                                            <Input
+                                                className='input'
+                                                placeholder='Name'
+                                                name='name'
+                                                id='name'
+                                                innerRef={register({ required: true })}
+                                            />
+                                            {errors.name?.type === 'required' && "Name is required"}
+                                        </Col>
+                                        <Col sm='12' md='6' className='mb-4'>
+                                            <Input
+                                                className='input'
+                                                placeholder='Surname'
+                                                name='surname'
+                                                id='surname'
+                                                innerRef={register({ required: true })}
+
+                                            />
+                                           <span > {errors.surname?.type === 'required' && "Surname is required"}</span>
+                                        </Col>
+                                    </Row>
+                                    <Row >
+                                        <Col sm='12' md='12'>
+                                            <Input 
+                                            className='input' 
+                                            placeholder='Message'  
+                                            name='comment'
+                                            id='comment'
+                                            type='textarea'
+                                            innerRef={register({ required: true })}
+                                            />
+                                            {errors.comment?.type === 'required' && "Comment is required"}
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col sm='12' md='6'>
+                                            <Button type='submit' className='mt-4 mb-4 form-button'>Send</Button>
+                                        </Col>
+                                    </Row>
+                                </form>
                             </CardBody>
                         </Card>
                     </Collapse>

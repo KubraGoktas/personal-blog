@@ -5,9 +5,7 @@
   scroll-behavior: smooth;
 } */
 
-/* :root {
-  width: 100% !important;
-} */
+
 
 
 .navlink{
@@ -40,33 +38,18 @@
 }
 .image-container{
   padding-top:20px;
-  /* width: 50%; */
-  /* align-self: center;
-  text-align: center; */
-  /* margin-top: 50px; */
-  /* position: relative; */
   
 }
 
 .about-container{
-  /* position: absolute; */
-  /* background-color: #393E46; */
   align-self: center;
-  /* width: 50%; */
   height: 80vh;
-  /* margin-top: -100px; */
   z-index: -1;
-  /* padding:50px */
 }
 
 .parallax {
-  /* The image used */
   background-image: url("./assets/images/contact.png");
-
-  /* Set a specific height */
-  min-height: 300px; 
-
-  /* Create the parallax scrolling effect */
+  min-height: 300px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -75,10 +58,8 @@
 
 .input{
   background-color: rgba(120, 122, 145,.55) !important;
-  /* background-color: transparent !important; */
   color:#EEEEEE !important;
   border: none !important;
-  /* border-bottom: 2px solid gray !important; */
 }
 
 ::placeholder {
@@ -95,8 +76,6 @@
 }
 
 .test-container{
-  /* border: 1px solid gray; */
-  /* width: 40vw; */
   height: '10%';
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   padding: 20px;
@@ -106,7 +85,6 @@
 }
 
 .icon{
-  /* justify-content: flex-end; */
   right: 0;
   
 }
@@ -163,3 +141,13 @@
   object-fit: cover;
 }
 
+.addcomment{
+  padding-left:1 !important;
+  font-family: 'Righteous', cursive;
+}
+.addcommenticon{
+  padding-right:1 !important;
+  font-family: 'Righteous', cursive;
+  text-align-last: end !important;
+
+}
