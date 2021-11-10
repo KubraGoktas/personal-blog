@@ -1,6 +1,6 @@
 import React from 'react'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 import { Col, Row } from 'reactstrap'
-import img1 from '../assets/images/sw1.png'
 
 const SwiperItemWithImage = ({title,text,img}) => {
     return (
@@ -17,7 +17,7 @@ const SwiperItemWithImage = ({title,text,img}) => {
                     </Row>
                 </Col>
                 <Col>
-                    <img src={img} />
+                    <LazyLoadImage src={img} />
                 </Col>
             </Row>
         </div>

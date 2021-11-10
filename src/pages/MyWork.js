@@ -21,6 +21,7 @@ import img3 from '../assets/images/sw3.png'
 SwiperCore.use([Mousewheel, Pagination,Navigation,EffectFade]);
 
 const MyWork = () => {
+    const height=window.innerHeight;
     const WorkList = [
         {
             title: 'React',
@@ -42,7 +43,7 @@ const MyWork = () => {
 
     return (
         <div id='MyWork' style={{backgroundColor:'rgba(33,37,41,255)'}}>
-            <Container style={{ height: 500, position: 'relative' }}>
+            <Container style={{ height: height/1.5, position: 'relative' }}>
                 <Swiper
                     direction={'vertical'}
                     pagination={true}

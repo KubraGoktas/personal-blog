@@ -32,8 +32,7 @@ const Header = () => {
                 dark
                 expand="md"
                 light
-                className="sticky mb-0"
-
+                className="sticky"
             >
                 {/* <NavbarBrand href="/">
                     <img src={logo} width={50} height={50} alt='logo' />

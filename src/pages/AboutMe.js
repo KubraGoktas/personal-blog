@@ -8,6 +8,7 @@ import SwiperItem from '../components/SwiperItem';
 import SwiperCore, {
     Navigation
 } from 'swiper';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 // install Swiper modules
 SwiperCore.use([Navigation]);
@@ -22,7 +23,7 @@ const AboutMe = () => {
                     <Col md='6'>
                         <div className='image-container row'>
                             <Col lg='6' md='6' sm='12' >
-                                <img src={me} alt='kg' className='image' />
+                                <LazyLoadImage src={me} alt='kg' className='image' />
                             </Col>
                             <Col lg='6' md='6' sm='12' >
                                 <div className='name'>
@@ -55,7 +56,6 @@ const AboutMe = () => {
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <SwiperItem />
-
                                 </SwiperSlide>
                             </Swiper>
                         </div>

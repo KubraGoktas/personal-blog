@@ -7,7 +7,7 @@ const ContactMe = () => {
         <div id='ContactMe'>
             <div class="parallax"
             >
-                <div style={{ height: '100%', paddingRight: '20%', paddingLeft: '20%' }}>
+                <div style={{ height: '50%', width: '50%',paddingTop:'5%',paddingBottom:'5%',justifyContent:'center',marginRight:'auto',marginLeft:'auto' }}>
                     <Row className='contact-title'>
                         Contact Me
                     </Row>

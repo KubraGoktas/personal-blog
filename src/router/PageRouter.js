@@ -12,30 +12,16 @@ import Comments from '../pages/Comments'
 const PageRouter = () => {
     return (
 
-        <Router>
+        <>
             <Header />
             <div style={{ marginTop: 50 }}>
-                <Header />
                 <AboutMe />
                 <MyWork />
                 <Comments />
                 <ContactMe />
                 <Footer />
             </div>
-            {/* <div style={{marginTop:70}}>
-                <Switch>
-                    {
-                        routes.map((item, key) => {
-                            return (
-                                <Route key={key} path={item.path} component={item.component} />
-                            )
-                        })
-                    }
-
-                </Switch>
-            </div> */}
-        </Router>
-
+        </>
     )
 }
 

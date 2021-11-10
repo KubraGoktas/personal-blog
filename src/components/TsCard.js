@@ -1,6 +1,7 @@
 import React from 'react'
 import { Col, Row } from 'reactstrap'
 import { BsTrash } from "react-icons/bs";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 
 const TsCard = ({ comment, comments, setcomments }) => {
@@ -9,7 +10,7 @@ const TsCard = ({ comment, comments, setcomments }) => {
             <Row>
                 <Col>
                     <div className='test-image-container'>
-                        <img src={comment.image} alt={'a'} style={{ borderRadius: 60, position: 'relative', marginTop: -50 }} />
+                        <LazyLoadImage src={comment.image} alt={'a'} style={{ borderRadius: 60, position: 'relative', marginTop: -50 }} />
                     </div>
                 </Col>
                 <Col style={{ textAlignLast: 'end' }}>
