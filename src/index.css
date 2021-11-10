@@ -120,3 +120,8 @@ code {
   border-bottom: 3px solid gray;
   margin-bottom: 50px;
 }
+
+.about-text{
+  font-size: 1.1vw;
+
+}

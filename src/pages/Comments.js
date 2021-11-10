@@ -46,26 +46,26 @@ const Comments = () => {
     ])
 
     return (
-        <div>
-            <div style={{ height: '100%' }}>
-                <Container
-                    style={{
-                        margin: 'auto',
-                        left: 0, right: 0,
-                    }}
-                >
-                    <Row >
-                        {comments.map((item, key) => {
-                            return (
-                                <Col style={{ padding: 20 }} key={key}>
-                                    <TsCard comment={item} comments={comments} setcomments={setcomments}/>
-                                </Col>
-                            )
-                        })}
-                    </Row>
-                </Container>
-            </div>
+
+        <div style={{ height: '100%' }}>
+            <Container
+                style={{
+                    margin: 'auto',
+                    left: 0, right: 0,
+                }}
+            >
+                <Row >
+                    {comments.map((item, key) => {
+                        return (
+                            <Col lg='6' md='12' sm='12' style={{ padding: 20 }} key={key}>
+                                <TsCard comment={item} comments={comments} setcomments={setcomments} />
+                            </Col>
+                        )
+                    })}
+                </Row>
+            </Container>
         </div>
+
     )
 }
 

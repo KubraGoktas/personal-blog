@@ -7,15 +7,15 @@ const ContactMe = () => {
         <div>
             <div class="parallax"
             >
-                <div style={{ height: '500px', paddingRight: '20%', paddingLeft: '20%' }}>
+                <div style={{ height: '100%', paddingRight: '20%', paddingLeft: '20%' }}>
                     <Row className='contact-title'>
                         Contact Me
                     </Row>
-                    <Row className='mb-4'>
-                        <Col sm='12' md='6'>
+                    <Row >
+                        <Col sm='12' md='6' className='mb-4'>
                             <Input className='input' placeholder='Name' />
                         </Col>
-                        <Col sm='12' md='6'>
+                        <Col sm='12' md='6' className='mb-4'>
                             <Input className='input' placeholder='Surname' />
                         </Col>
                     </Row>
@@ -26,7 +26,7 @@ const ContactMe = () => {
                     </Row>
                     <Row>
                         <Col sm='12' md='6'>
-                            <Button className='mt-4 form-button'>Send</Button>
+                            <Button className='mt-4 mb-4 form-button'>Send</Button>
                         </Col>
                     </Row>
                 </div>
