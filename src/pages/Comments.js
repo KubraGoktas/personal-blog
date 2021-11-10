@@ -1,8 +1,5 @@
 import React, { useState } from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react';
 
-import me from '../assets/images/me.jpg'
-import SwiperItem from '../components/SwiperItem';
 import 'swiper/swiper-bundle.min.css'
 import 'swiper/swiper.min.css'
 import ts1 from '../assets/images/testimonial-01.png'
@@ -47,7 +44,7 @@ const Comments = () => {
 
     return (
 
-        <div style={{ height: '100%' }} id='Comments'>
+        <div style={{ height: '100%',marginTop:'30px' }} id='Comments'>
             <Container
                 style={{
                     margin: 'auto',

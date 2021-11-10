@@ -14,7 +14,7 @@ const PageRouter = () => {
 
         <Router>
             <Header />
-            <div style={{ marginTop: 70 }}>
+            <div style={{ marginTop: 50 }}>
                 <Header />
                 <AboutMe />
                 <MyWork />

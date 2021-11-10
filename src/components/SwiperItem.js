@@ -3,15 +3,14 @@ import { Col, Row } from 'reactstrap'
 
 const SwiperItem = () => {
     return (
-        <div style={{ width: '100%', height: '100%', textAlign: 'center', justifyContent: 'center' }}>
-            <div style={{ width: '50%',marginLeft:'auto',marginRight:'auto' }}>
+        <div style={{ width: '100%', height: '100%', textAlign: 'center', justifyContent: 'center', padding: 50 }}>
+            <div style={{ width: '100%', marginLeft: 'auto', marginRight: 'auto' }}>
                 <Row>
-                    <span>başlık</span>
+                    <span className='about-title'>who am I?</span>
                 </Row>
                 <Row>
                     <Col className='about-text'>
-                        Nereden Bulabilirim?
-                        Lorem Ipsum pasajlarının birçok çeşitlemesi vardır. Ancak bunların büyük bir çoğunluğu mizah katılarak veya rastgele sözcükler eklenerek değiştirilmişlerdir. Eğer bir Lorem Ipsum pasajı kullanacaksanız, metin aralarına utandırıcı sözcükler gizlenmediğinden emin olmanız gerekir. İnternet'teki tüm Lorem Ipsum üreteçleri önceden belirlenmiş metin bloklarını yineler. Bu da, bu üreteci İnternet üzerindeki gerçek Lorem Ipsum üreteci yapar. Bu üreteç, 200'den fazla Latince sözcük ve onlara ait cümle yapılarını içeren bir sözlük kullanır. Bu nedenle, üretilen Lorem Ipsum metinleri yinelemelerden, mizahtan ve karakteristik olmayan sözcüklerden uzaktır.
+                        Hello, my name is Kübra Göktaş. I am a computer engineer. I am from the Sivas and I currently live in Sivas. I have been a front end developer for 7 mounth, and work in react and react-naive preparation. Before becoming a frontend developer, I worked as a backend developer with ASP .NET CORE. In my free time, I enjoy hiking, reading book, and coding.
                     </Col>
                 </Row>
             </div>

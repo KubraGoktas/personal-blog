@@ -44,16 +44,16 @@ code {
 }
 .image{
   border-radius: 900px;
-  width: 20%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   z-index: 5;
 }
 .image-container{
-  padding:20px;
-  width: 50%;
-  align-self: center;
-  text-align: center;
-  margin-top: 50px;
+  padding-top:20px;
+  /* width: 50%; */
+  /* align-self: center;
+  text-align: center; */
+  /* margin-top: 50px; */
   /* position: relative; */
   
 }
@@ -62,11 +62,11 @@ code {
   /* position: absolute; */
   /* background-color: #393E46; */
   align-self: center;
-  width: 50%;
+  /* width: 50%; */
   height: 80vh;
   /* margin-top: -100px; */
   z-index: -1;
-  padding:50px
+  /* padding:50px */
 }
 
 .parallax {
@@ -131,13 +131,30 @@ code {
 
 .about-text{
   font-size: 1.1vw;
-  font-family: 'Courgette', cursive;
+  font-family: 'Righteous', cursive;
+  color: rgba(178, 177, 185,.5) !important;
 
 }
 
 .about-title{
-  font-size: 5vw;
+  font-size: 2vw;
   font-weight: bolder;
-  font-family: 'Courgette', cursive;
+  font-family: 'Righteous', cursive;
+  color: rgba(178, 177, 185,.55) !important;
 
+}
+
+.name{
+  font-family: 'Righteous', cursive;
+  font-size: 3vw;
+  font-weight: bold;
+  color: rgb(178, 177, 185);
+
+}
+
+.job{
+  color: rgba(178, 177, 185,.55);
+  font-family: 'Righteous', cursive;
+  font-size: 2vw;
+  font-weight: thin;
 }

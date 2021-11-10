@@ -1,45 +1,69 @@
 import React, { useState } from 'react'
-import { Row } from 'reactstrap'
+import { Col, Container, Row } from 'reactstrap'
 import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Swiper, SwiperSlide } from 'swiper';
 
 import me from '../assets/images/me.jpg'
 import SwiperItem from '../components/SwiperItem';
-import 'swiper/swiper-bundle.min.css'
-import 'swiper/swiper.min.css'
+import SwiperCore, {
+    Navigation
+} from 'swiper';
+
+// install Swiper modules
+SwiperCore.use([Navigation]);
+
+
 const AboutMe = () => {
     const [height, setheight] = useState(window.innerHeight)
     return (
-        <div style={{height:'50%'}} id='AboutMe'>
-            <Row>
-                <div className='image-container'>
-                    <img src={me} alt='kg' className='image' />
-                </div>
-            </Row>
+        <div style={{ height: '50%',backgroundColor:'rgba(33,37,41,255)',top:0 }} id='AboutMe'>
+            <Container>
+                <Row>
+                    <Col md='6'>
+                        <div className='image-container row'>
+                            <Col lg='6' md='6' sm='12' >
+                                <img src={me} alt='kg' className='image' />
+                            </Col>
+                            <Col lg='6' md='6' sm='12' >
+                                <div className='name'>
+                                    Kübra Göktaş
+                                </div>
+                                <div className='job'>
+                                    Computer Engineer
+                                </div>
+                            </Col>
+                        </div>
+                    </Col>
+                    <Col md='6'>
+                        {/* <div className='about-container' > */}
+                        <div style={{ width: '100%' }}>
 
-            <div className='about-container' >
-                <div style={{ marginTop:100,height:'100%'}}>
+                            <Swiper
+                                navigation={true}
+                                style={
+                                    {
+                                        justifyContent: 'center',
+                                        alignItems: 'center',
+                                        textAlignLast: 'center'
 
-                    <Swiper
-                        spaceBetween={50}
-                        slidesPerView={1}
-                        autoplay={true}
-                        onSlideChange={() => console.log('slide change')}
-                        onSwiper={(swiper) => console.log(swiper)}
+                                    }
+                                }
+                            // autoplay={true}
+                            >
+                                <SwiperSlide>
+                                    <SwiperItem />
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <SwiperItem />
 
-                    >
-                        <SwiperSlide>
-                            <SwiperItem />
+                                </SwiperSlide>
+                            </Swiper>
+                        </div>
 
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <SwiperItem />
-
-                        </SwiperSlide>
-                    </Swiper>
-                </div>
-
-            </div>
-
+                        {/* </div> */}
+                    </Col>
+                </Row>
+            </Container>
         </div>
     )
 }
