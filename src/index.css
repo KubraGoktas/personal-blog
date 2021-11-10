@@ -48,7 +48,7 @@
 }
 
 .parallax {
-  background-image: url("./assets/images/contact.png");
+  background-image: url("./assets/images/contact.webp");
   min-height: 300px;
   background-attachment: fixed;
   background-position: center;

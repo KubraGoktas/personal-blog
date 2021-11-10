@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 
 import 'swiper/swiper-bundle.min.css'
 import 'swiper/swiper.min.css'
-import ts1 from '../assets/images/testimonial-01.png'
-import ts2 from '../assets/images/testimonial-02.png'
-import ts3 from '../assets/images/testimonial-03.png'
+import ts1 from '../assets/images/testimonial-01.webp'
+import ts2 from '../assets/images/testimonial-02.webp'
+import ts3 from '../assets/images/testimonial-03.webp'
 import TsCard from '../components/TsCard';
 import { Button, Card, CardBody, Col, Collapse, Container, Input, Row } from 'reactstrap';
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, Col, Input, Row } from 'reactstrap'
-import me from '../assets/images/me.jpg'
+
 
 const ContactMe = () => {
     return (

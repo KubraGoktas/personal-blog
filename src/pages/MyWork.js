@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Col, Container, Row } from 'reactstrap'
-import foto1 from '../assets/images/indir.jpg'
-import me from '../assets/images/me.jpg'
 import { Swiper, SwiperSlide } from 'swiper/react';
 // import { Swiper, SwiperSlide } from 'swiper';
 import SwiperCore, {
@@ -12,9 +10,9 @@ import SwiperCore, {
 } from 'swiper';
 import SwiperItemWithImage from '../components/SwiperItemWithImage';
 
-import img1 from '../assets/images/sw1.png'
-import img2 from '../assets/images/sw2.png'
-import img3 from '../assets/images/sw3.png'
+import img1 from '../assets/images/sw1.webp'
+import img2 from '../assets/images/sw2.webp'
+import img3 from '../assets/images/sw3.webp'
 
 
 // install Swiper modules

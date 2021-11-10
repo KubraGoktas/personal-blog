@@ -3,7 +3,7 @@ import { Col, Container, Row } from 'reactstrap'
 import { Swiper, SwiperSlide } from 'swiper/react';
 // import { Swiper, SwiperSlide } from 'swiper';
 
-import me from '../assets/images/me.jpg'
+import me from '../assets/images/me.webp'
 import SwiperItem from '../components/SwiperItem';
 import SwiperCore, {
     Navigation
