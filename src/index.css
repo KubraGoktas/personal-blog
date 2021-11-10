@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Zen+Old+Mincho:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 body {
   
@@ -75,8 +76,24 @@ code {
 }
 
 .input{
-  background-color: rgba(255,255,255,.55) !important;
+  background-color: rgba(120, 122, 145,.55) !important;
+  /* background-color: transparent !important; */
+  color:#EEEEEE !important;
   border: none !important;
+  /* border-bottom: 2px solid gray !important; */
+}
+
+::placeholder {
+  color:#EEEEEE !important;
+  font-family: 'Righteous', cursive;
+}
+
+.form-button{
+  font-family: 'Righteous', cursive;
+  width: 200px !important;
+  background-color: rgba(120, 122, 145,.55) !important;
+  color: '#EEEEEE' !important;
+  border: none !important
 }
 
 .test-container{
@@ -94,4 +111,12 @@ code {
   /* justify-content: flex-end; */
   right: 0;
   
+}
+
+.contact-title{
+  font-size: 100px;
+  font-family: 'Righteous', cursive;
+  color:#787A91;
+  border-bottom: 3px solid gray;
+  margin-bottom: 50px;
 }

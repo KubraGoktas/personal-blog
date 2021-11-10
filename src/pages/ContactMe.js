@@ -7,11 +7,11 @@ const ContactMe = () => {
         <div>
             <div class="parallax"
             >
-                <div style={{ height: '500px', padding: 200 }}>
+                <div style={{ height: '500px', paddingRight: '20%', paddingLeft: '20%' }}>
                     <Row className='contact-title'>
-                    Contact Me
+                        Contact Me
                     </Row>
-                    <Row>
+                    <Row className='mb-4'>
                         <Col sm='12' md='6'>
                             <Input className='input' placeholder='Name' />
                         </Col>
@@ -21,12 +21,12 @@ const ContactMe = () => {
                     </Row>
                     <Row >
                         <Col sm='12' md='12'>
-                            <Input className='input' placeholder='Message' />
+                            <Input className='input' placeholder='Message'  type="textarea"/>
                         </Col>
                     </Row>
                     <Row>
                         <Col sm='12' md='6'>
-                            <Button style={{ width: 200, backgroundColor: 'rgba(255,255,255,.55)', color: 'gray' }}>Send</Button>
+                            <Button className='mt-4 form-button'>Send</Button>
                         </Col>
                     </Row>
                 </div>
