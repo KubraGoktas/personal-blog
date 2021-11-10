@@ -6,10 +6,13 @@ import ts1 from '../assets/images/testimonial-01.png'
 import ts2 from '../assets/images/testimonial-02.png'
 import ts3 from '../assets/images/testimonial-03.png'
 import TsCard from '../components/TsCard';
-import { Col, Container, Row } from 'reactstrap';
+import { Button, Card, CardBody, Col, Collapse, Container, Row } from 'reactstrap';
 
+import { BiCommentAdd } from "react-icons/bi";
 
 const Comments = () => {
+
+    const [open, setopen] = useState(false)
 
     const [comments, setcomments] = useState([
         {
@@ -44,13 +47,30 @@ const Comments = () => {
 
     return (
 
-        <div style={{ height: '100%',marginTop:'30px' }} id='Comments'>
+        <div style={{ height: '100%', marginTop: '30px' }} id='Comments'>
             <Container
                 style={{
                     margin: 'auto',
                     left: 0, right: 0,
                 }}
             >
+                <Row>
+                    {/* <Row
+                        onClick={()=>setopen(!open)}
+                        style={{
+                            marginBottom: '1rem'
+                        }}
+                    > */}
+                      <BiCommentAdd/>  Add Comment
+                    
+                    <Collapse isOpen={open}>
+                        <Card>
+                            <CardBody>
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                            </CardBody>
+                        </Card>
+                    </Collapse>
+                </Row>
                 <Row >
                     {comments.map((item, key) => {
                         return (
