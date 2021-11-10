@@ -6,7 +6,7 @@ const SwiperItem = () => {
         <div style={{ width: '100%', height: '100%', textAlign: 'center', justifyContent: 'center', padding: 50 }}>
             <div style={{ width: '100%', marginLeft: 'auto', marginRight: 'auto' }}>
                 <Row>
-                    <span className='about-title'>who am I?</span>
+                    <span className='about-title'>who am i ?</span>
                 </Row>
                 <Row>
                     <Col className='about-text'>
