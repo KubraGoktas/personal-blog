@@ -5,7 +5,7 @@ import { Button, Col, Input, Row } from 'reactstrap'
 const ContactMe = () => {
     return (
         <div id='ContactMe'>
-            <div class="parallax"
+            <div className="parallax"
             >
                 <div style={{ height: '50%', width: '50%',paddingTop:'5%',paddingBottom:'5%',justifyContent:'center',marginRight:'auto',marginLeft:'auto' }}>
                     <Row className='contact-title'>

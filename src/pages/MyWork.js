@@ -51,7 +51,7 @@ const MyWork = () => {
                 >
                     {WorkList.map((item, key) => {
                         return (
-                            <SwiperSlide>
+                            <SwiperSlide key={key}>
                                 <SwiperItemWithImage title={item.title} text={item.text} img={item.img} />
                             </SwiperSlide>
                         )
