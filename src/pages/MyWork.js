@@ -26,7 +26,7 @@ const MyWork = () => {
     }, [ScrollPosition])
     console.log(ScrollPosition, opacity)
     return (
-        <div >
+        <div id='MyWork' >
             {/* <img src={foto1} width='50%' style={{ position: 'absolute' }} />
             <img src={me} width='50%' style={{ position: 'relative', opacity: opacity }} /> */}
 

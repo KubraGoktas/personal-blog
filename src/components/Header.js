@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap'
+import { Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink, Row } from 'reactstrap'
 import logo from '../assets/images/logo.png'
 
 const Header = () => {
@@ -8,19 +8,19 @@ const Header = () => {
     const navLinks = [
         {
             text: 'About Me',
-            path: "/AboutMe"
+            path: "#AboutMe"
         },
         {
             text: 'My Work',
-            path: "/MyWork"
+            path: "#MyWork"
         },
         {
             text: 'Contact Me',
-            path: "/ContactMe"
+            path: "#ContactMe"
         },
         {
             text: 'Coments',
-            path: "/Comments"
+            path: "#Comments"
         }
     ]
     return (
@@ -33,37 +33,28 @@ const Header = () => {
                 light
                 className="sticky"
             >
-                <NavbarBrand href="/">
+                {/* <NavbarBrand href="/">
                     <img src={logo} width={50} height={50} alt='logo' />
-                </NavbarBrand>
+                </NavbarBrand> */}
                 <NavbarToggler onClick={() => setopen(!open)} />
                 <Collapse isOpen={open} navbar>
-                    <Nav
-                        className="me-auto"
-                        navbar
-                    >
 
+                    <Nav
+                        // className="me-auto"
+                        navbar
+                        className='navitem'
+                    >
                         {
                             navLinks.map((item, key) => {
                                 return (
                                     <NavItem key={key}>
-                                        <NavLink>
-                                            <Link
-                                                to={{
-                                                    pathname: item.path,
-                                                    // state: { fromDashboard: true }
-                                                }}
-                                                className='navlink'
-                                            >
-                                                {item.text}
-                                            </Link>
+                                        <NavLink className='navlink' href={item.path}>
+                                            {item.text}
                                         </NavLink>
                                     </NavItem>
                                 )
                             })
                         }
-
-
                     </Nav>
                     {/* <NavbarText>
                         Simple Text

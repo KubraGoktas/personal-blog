@@ -9,7 +9,7 @@ import 'swiper/swiper.min.css'
 const AboutMe = () => {
     const [height, setheight] = useState(window.innerHeight)
     return (
-        <div style={{height:'50%'}}>
+        <div style={{height:'50%'}} id='AboutMe'>
             <Row>
                 <div className='image-container'>
                     <img src={me} alt='kg' className='image' />

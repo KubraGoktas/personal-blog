@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Zen+Old+Mincho:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Righteous&display=swap');
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   
@@ -19,8 +23,12 @@ code {
 .navlink{
   color:rgba(255,255,255,.55);
   text-decoration: none;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Righteous', cursive;
   justify-content: flex-end;
+}
+.navitem{
+ margin-left: auto;
+ margin-right: auto;
 }
 
 .navlink:hover{
@@ -42,7 +50,7 @@ code {
 }
 .image-container{
   padding:20px;
-  width: 100%;
+  width: 50%;
   align-self: center;
   text-align: center;
   margin-top: 50px;
@@ -54,7 +62,7 @@ code {
   /* position: absolute; */
   /* background-color: #393E46; */
   align-self: center;
-  width: 100%;
+  width: 50%;
   height: 80vh;
   /* margin-top: -100px; */
   z-index: -1;
@@ -123,5 +131,13 @@ code {
 
 .about-text{
   font-size: 1.1vw;
+  font-family: 'Courgette', cursive;
+
+}
+
+.about-title{
+  font-size: 5vw;
+  font-weight: bolder;
+  font-family: 'Courgette', cursive;
 
 }

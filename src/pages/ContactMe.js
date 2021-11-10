@@ -4,7 +4,7 @@ import me from '../assets/images/me.jpg'
 
 const ContactMe = () => {
     return (
-        <div>
+        <div id='ContactMe'>
             <div class="parallax"
             >
                 <div style={{ height: '100%', paddingRight: '20%', paddingLeft: '20%' }}>
