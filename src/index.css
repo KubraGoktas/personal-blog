@@ -96,7 +96,7 @@
 
 .test-container{
   /* border: 1px solid gray; */
-  width: 40vw;
+  /* width: 40vw; */
   height: '10%';
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   padding: 20px;
@@ -112,7 +112,7 @@
 }
 
 .contact-title{
-  font-size: 100px;
+  font-size: 6vw;
   font-family: 'Righteous', cursive;
   color:#787A91;
   border-bottom: 3px solid gray;
