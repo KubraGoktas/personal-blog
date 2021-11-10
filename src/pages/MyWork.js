@@ -7,68 +7,58 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, {
     Navigation,
     Pagination,
-    Mousewheel
+    Mousewheel,
+    EffectFade
 } from 'swiper';
 import SwiperItemWithImage from '../components/SwiperItemWithImage';
+
+import img1 from '../assets/images/sw1.png'
+import img2 from '../assets/images/sw2.png'
+import img3 from '../assets/images/sw3.png'
+
+
 // install Swiper modules
-SwiperCore.use([Navigation]);
-SwiperCore.use([Mousewheel,Pagination]);
+SwiperCore.use([Mousewheel, Pagination,Navigation,EffectFade]);
+
 const MyWork = () => {
-    const [opacity, setopacity] = useState(1)
-    const [ScrollPosition, setScrollPosition] = useState()
-    const position = window.pageYOffset;
-    const handleScroll = () => {
-        const position = window.pageYOffset;
-        setScrollPosition(position);
-    };
-
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
-
-    useEffect(() => {
-        if (ScrollPosition > 520) {
-            setopacity(opacity - 0.01)
+    const WorkList = [
+        {
+            title: 'React',
+            text: 'I have been developing frontend for about 6-7 months in the institution where I have been doing my internship for 10 months. I have more than 10 works made with React js and react native.',
+            img: img1
+        },
+        {
+            title: 'React Native',
+            text: 'I have been working with react native for 4-5 months. I have developed a few projects and uploaded them to the market. Working with react native in Front always gives me more pleasure.',
+            img: img2
+        },
+        {
+            title: 'Asp .NET',
+            text: 'You can take a look at the projects I made with .net core on github. Before my frontend adventure, I did backend developments and I have basic docker knowledge.',
+            img: img3
         }
-    }, [ScrollPosition])
+    ]
 
-    console.log(ScrollPosition, opacity)
 
     return (
-        <div id='MyWork'>
-            <Container style={{height:500,position:'relative'}}>
-                {/* <Row
-                    style={{
-                        textAlignLast: 'center'
-                    }}
-                >
-                    <Col>
-                        burası1
-                    </Col>
-                    <Col>
-                        burası2
-                    </Col>
-                </Row> */}
+        <div id='MyWork' style={{backgroundColor:'rgba(33,37,41,255)'}}>
+            <Container style={{ height: 500, position: 'relative' }}>
                 <Swiper
                     direction={'vertical'}
                     pagination={true}
                     mousewheel={true}
-                    style={{width:'100%',height:'100%'}}
+                    effect={'fade'}
+                    style={{ width: '100%', height: '100%' }}
                 >
-                    <SwiperSlide>
-                        <SwiperItemWithImage/>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                    <SwiperItemWithImage/>
-                    </SwiperSlide>
+                    {WorkList.map((item, key) => {
+                        return (
+                            <SwiperSlide>
+                                <SwiperItemWithImage title={item.title} text={item.text} img={item.img} />
+                            </SwiperSlide>
+                        )
+                    })}
                 </Swiper>
             </Container>
-            {/* <img src={foto1} width='50%' style={{ position: 'absolute' }} />
-            <img src={me} width='50%' style={{ position: 'relative', opacity: opacity }} /> */}
 
         </div>
     )

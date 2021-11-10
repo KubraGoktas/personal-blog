@@ -15,13 +15,14 @@ const Header = () => {
             path: "#MyWork"
         },
         {
+            text: 'Coments',
+            path: "#Comments"
+        },
+        {
             text: 'Contact Me',
             path: "#ContactMe"
         },
-        {
-            text: 'Coments',
-            path: "#Comments"
-        }
+        
     ]
     return (
         <>

@@ -5,6 +5,10 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  width: 100% !important;
+}
+
 body {
   
   margin: 0;
@@ -172,3 +176,4 @@ code {
   height: 100%;
   object-fit: cover;
 }
+
